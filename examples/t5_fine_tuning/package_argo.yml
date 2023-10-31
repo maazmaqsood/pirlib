@@ -1,0 +1,188 @@
+graphs:
+- id: t5_fine_tuning
+  nodes:
+  - id: data_preprocessing
+    entrypoints:
+      main:
+        version: v1
+        handler: examples.t5_fine_tuning.tuning:data_preprocessing
+        runtime: python:3.8
+        codeurl: null
+        image: maaz112233/pirlib
+    framework: null
+    config:
+      timer: false
+    inputs:
+    - id: dataset
+      iotype: DIRECTORY
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: dataset
+      meta:
+        name: dataset
+        annotations: null
+    outputs:
+    - id: return
+      iotype: DIRECTORY
+      meta:
+        name: return
+        annotations: null
+    meta:
+      name: data_preprocessing
+      annotations: null
+  - id: fine_tuning
+    entrypoints:
+      main:
+        version: v1
+        handler: examples.t5_fine_tuning.tuning:fine_tuning
+        runtime: python:3.8
+        codeurl: null
+        image: maaz112233/pirlib
+    framework: null
+    config:
+      timer: false
+    inputs:
+    - id: data_path
+      iotype: DIRECTORY
+      source:
+        node_id: data_preprocessing
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: data_path
+        annotations: null
+    - id: dataset
+      iotype: DIRECTORY
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: dataset
+      meta:
+        name: dataset
+        annotations: null
+    outputs:
+    - id: return
+      iotype: DIRECTORY
+      meta:
+        name: return
+        annotations: null
+    meta:
+      name: fine_tuning
+      annotations: null
+  - id: model_distillation
+    entrypoints:
+      main:
+        version: v1
+        handler: examples.t5_fine_tuning.tuning:model_distillation
+        runtime: python:3.8
+        codeurl: null
+        image: maaz112233/pirlib
+    framework: null
+    config:
+      timer: false
+    inputs:
+    - id: fine_tuned_model_path
+      iotype: DIRECTORY
+      source:
+        node_id: fine_tuning
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: fine_tuned_model_path
+        annotations: null
+    - id: data_path
+      iotype: DIRECTORY
+      source:
+        node_id: data_preprocessing
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: data_path
+        annotations: null
+    - id: dataset
+      iotype: DIRECTORY
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: dataset
+      meta:
+        name: dataset
+        annotations: null
+    outputs:
+    - id: return
+      iotype: DIRECTORY
+      meta:
+        name: return
+        annotations: null
+    meta:
+      name: model_distillation
+      annotations: null
+  - id: generate_output
+    entrypoints:
+      main:
+        version: v1
+        handler: examples.t5_fine_tuning.tuning:generate_output
+        runtime: python:3.8
+        codeurl: null
+        image: maaz112233/pirlib
+    framework: null
+    config:
+      timer: false
+    inputs:
+    - id: dataset
+      iotype: DIRECTORY
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: dataset
+      meta:
+        name: dataset
+        annotations: null
+    - id: fine_tuning_output
+      iotype: DIRECTORY
+      source:
+        node_id: model_distillation
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: fine_tuning_output
+        annotations: null
+    outputs:
+    - id: return
+      iotype: DIRECTORY
+      meta:
+        name: return
+        annotations: null
+    meta:
+      name: generate_output
+      annotations: null
+  subgraphs: []
+  inputs:
+  - id: dataset
+    iotype: DIRECTORY
+    meta:
+      name: dataset
+      annotations: null
+  outputs:
+  - id: return
+    iotype: DIRECTORY
+    source:
+      node_id: generate_output
+      subgraph_id: null
+      output_id: return
+      graph_input_id: null
+    meta:
+      name: return
+      annotations: null
+  meta:
+    name: t5_fine_tuning
+    annotations: null

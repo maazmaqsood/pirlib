@@ -1,0 +1,55 @@
+graphs:
+- id: pipeline
+  nodes:
+  - id: get_version
+    entrypoints:
+      main:
+        version: v1
+        handler: examples.utilizing_gpu.gpu:get_version
+        runtime: python:3.8
+        codeurl: null
+        image: maaz112233/pirlib
+    framework: null
+    config:
+      timer: false
+    inputs:
+    - id: dataset
+      iotype: DIRECTORY
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: dataset
+      meta:
+        name: dataset
+        annotations: null
+    outputs:
+    - id: return
+      iotype: DIRECTORY
+      meta:
+        name: return
+        annotations: null
+    meta:
+      name: get_version
+      annotations: null
+  subgraphs: []
+  inputs:
+  - id: dataset
+    iotype: DIRECTORY
+    meta:
+      name: dataset
+      annotations: null
+  outputs:
+  - id: return
+    iotype: DIRECTORY
+    source:
+      node_id: get_version
+      subgraph_id: null
+      output_id: return
+      graph_input_id: null
+    meta:
+      name: return
+      annotations: null
+  meta:
+    name: pipeline
+    annotations: null

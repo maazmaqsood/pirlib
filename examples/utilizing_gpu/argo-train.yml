@@ -1,0 +1,75 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: argo-train-
+spec:
+  entrypoint: DAG-pipeline
+  templates:
+  - name: get-version-template
+    container:
+      image: maaz112233/pirlib
+      command:
+      - python
+      - -m
+      - pirlib.backends.argo_batch
+      - node
+      - gASVXAIAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMC2dldF92ZXJzaW9ulIwLZW50cnlwb2ludHOUfZSMBG1haW6UaACMCkVudHJ5cG9pbnSUk5QpgZR9lCiMB3ZlcnNpb26UjAJ2MZSMB2hhbmRsZXKUjCZleGFtcGxlcy51dGlsaXppbmdfZ3B1LmdwdTpnZXRfdmVyc2lvbpSMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lIwFdGltZXKUiXOMBmlucHV0c5RdlGgAjAVJbnB1dJSTlCmBlH2UKGgFjAdkYXRhc2V0lIwGaW90eXBllIwJRElSRUNUT1JZlIwGc291cmNllGgAjApEYXRhU291cmNllJOUKYGUfZQojAdub2RlX2lklE6MC3N1YmdyYXBoX2lklE6MCW91dHB1dF9pZJROjA5ncmFwaF9pbnB1dF9pZJSMB2RhdGFzZXSUdWKMBG1ldGGUaACMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwHZGF0YXNldJSMC2Fubm90YXRpb25zlE51YnViYYwHb3V0cHV0c5RdlGgAjAZPdXRwdXSUk5QpgZR9lChoBYwGcmV0dXJulGgijAlESVJFQ1RPUlmUaC5oMCmBlH2UKGgzjAZyZXR1cm6UaDVOdWJ1YmFoLmgwKYGUfZQoaDOMC2dldF92ZXJzaW9ulGg1TnVidWIu
+      - gASVigAAAAAAAABdlIwKcGlybGliLnBpcpSMCkdyYXBoSW5wdXSUk5QpgZR9lCiMAmlklIwHZGF0YXNldJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBG1ldGGUaAGMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwHZGF0YXNldJSMC2Fubm90YXRpb25zlE51YnViYS4=
+      volumeMounts:
+      - name: node-outputs
+        mountPath: /mnt/node_outputs
+      - name: dataset
+        mountPath: /mnt/graph_inputs/dataset
+    volumes:
+    - name: node-outputs
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/utilizing_gpu/outputs
+        readOnly: no
+    - name: dataset
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/utilizing_gpu/inputs
+        readOnly: yes
+  - name: pipeline-template
+    container:
+      image: maaz112233/pirlib
+      command:
+      - python
+      - -m
+      - pirlib.backends.argo_batch
+      - graph
+      - gASV+QAAAAAAAABdlIwKcGlybGliLnBpcpSMC0dyYXBoT3V0cHV0lJOUKYGUfZQojAJpZJSMBnJldHVybpSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBnNvdXJjZZRoAYwKRGF0YVNvdXJjZZSTlCmBlH2UKIwHbm9kZV9pZJSMC2dldF92ZXJzaW9ulIwLc3ViZ3JhcGhfaWSUTowJb3V0cHV0X2lklIwGcmV0dXJulIwOZ3JhcGhfaW5wdXRfaWSUTnVijARtZXRhlGgBjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMBnJldHVybpSMC2Fubm90YXRpb25zlE51YnViYS4=
+      volumeMounts:
+      - name: node-outputs
+        mountPath: /mnt/node_outputs
+      - name: dataset
+        mountPath: /mnt/graph_inputs/dataset
+      - name: graph-outputs
+        mountPath: /mnt/graph_outputs
+    volumes:
+    - name: node-outputs
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/utilizing_gpu/outputs
+        readOnly: no
+    - name: dataset
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/utilizing_gpu/inputs
+        readOnly: yes
+    - name: graph-outputs
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/utilizing_gpu/outputs
+        readOnly: no
+  - name: DAG-pipeline
+    dag:
+      tasks:
+      - name: get-version
+        template: get-version-template
+        dependencies: []
+      - name: pipeline
+        template: pipeline-template
+        dependencies:
+        - get-version
