@@ -11,7 +11,9 @@ graphs:
         image: maaz112233/pirlib
     framework: null
     config:
-      timer: false
+      timer: true
+      cache: true
+      cache_key_file: hparams
     inputs:
     - id: dataset
       iotype: DIRECTORY
@@ -22,6 +24,16 @@ graphs:
         graph_input_id: dataset
       meta:
         name: dataset
+        annotations: null
+    - id: hparams
+      iotype: FILE
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: data_preproc_hp
+      meta:
+        name: hparams
         annotations: null
     outputs:
     - id: return
@@ -42,7 +54,9 @@ graphs:
         image: maaz112233/pirlib
     framework: null
     config:
-      timer: false
+      timer: true
+      cache: true
+      cache_key_file: hparams
     inputs:
     - id: data_path
       iotype: DIRECTORY
@@ -64,6 +78,16 @@ graphs:
       meta:
         name: dataset
         annotations: null
+    - id: hparams
+      iotype: FILE
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: tuning_hp
+      meta:
+        name: hparams
+        annotations: null
     outputs:
     - id: return
       iotype: DIRECTORY
@@ -83,7 +107,9 @@ graphs:
         image: maaz112233/pirlib
     framework: null
     config:
-      timer: false
+      timer: true
+      cache: true
+      cache_key_file: hparams
     inputs:
     - id: fine_tuned_model_path
       iotype: DIRECTORY
@@ -115,6 +141,16 @@ graphs:
       meta:
         name: dataset
         annotations: null
+    - id: hparams
+      iotype: FILE
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: distillation_hp
+      meta:
+        name: hparams
+        annotations: null
     outputs:
     - id: return
       iotype: DIRECTORY
@@ -123,6 +159,79 @@ graphs:
         annotations: null
     meta:
       name: model_distillation
+      annotations: null
+  - id: model_inference
+    entrypoints:
+      main:
+        version: v1
+        handler: examples.t5_fine_tuning.tuning:model_inference
+        runtime: python:3.8
+        codeurl: null
+        image: maaz112233/pirlib
+    framework: null
+    config:
+      timer: false
+      cache: true
+      cache_key_file: hparams
+    inputs:
+    - id: dataset
+      iotype: DIRECTORY
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: dataset
+      meta:
+        name: dataset
+        annotations: null
+    - id: data_path
+      iotype: DIRECTORY
+      source:
+        node_id: data_preprocessing
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: data_path
+        annotations: null
+    - id: fine_tuned_model_path
+      iotype: DIRECTORY
+      source:
+        node_id: fine_tuning
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: fine_tuned_model_path
+        annotations: null
+    - id: distilled_model_path
+      iotype: DIRECTORY
+      source:
+        node_id: model_distillation
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: distilled_model_path
+        annotations: null
+    - id: hparams
+      iotype: FILE
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: hparams
+      meta:
+        name: hparams
+        annotations: null
+    outputs:
+    - id: return
+      iotype: DIRECTORY
+      meta:
+        name: return
+        annotations: null
+    meta:
+      name: model_inference
       annotations: null
   - id: generate_output
     entrypoints:
@@ -146,7 +255,27 @@ graphs:
       meta:
         name: dataset
         annotations: null
+    - id: data_path
+      iotype: DIRECTORY
+      source:
+        node_id: data_preprocessing
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: data_path
+        annotations: null
     - id: fine_tuning_output
+      iotype: DIRECTORY
+      source:
+        node_id: fine_tuning
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: fine_tuning_output
+        annotations: null
+    - id: distillation_output
       iotype: DIRECTORY
       source:
         node_id: model_distillation
@@ -154,7 +283,27 @@ graphs:
         output_id: return
         graph_input_id: null
       meta:
-        name: fine_tuning_output
+        name: distillation_output
+        annotations: null
+    - id: inference_output
+      iotype: DIRECTORY
+      source:
+        node_id: model_inference
+        subgraph_id: null
+        output_id: return
+        graph_input_id: null
+      meta:
+        name: inference_output
+        annotations: null
+    - id: hparams
+      iotype: FILE
+      source:
+        node_id: null
+        subgraph_id: null
+        output_id: null
+        graph_input_id: hparams
+      meta:
+        name: hparams
         annotations: null
     outputs:
     - id: return
@@ -171,6 +320,26 @@ graphs:
     iotype: DIRECTORY
     meta:
       name: dataset
+      annotations: null
+  - id: hparams
+    iotype: FILE
+    meta:
+      name: hparams
+      annotations: null
+  - id: data_preproc_hp
+    iotype: FILE
+    meta:
+      name: data_preproc_hp
+      annotations: null
+  - id: tuning_hp
+    iotype: FILE
+    meta:
+      name: tuning_hp
+      annotations: null
+  - id: distillation_hp
+    iotype: FILE
+    meta:
+      name: distillation_hp
       annotations: null
   outputs:
   - id: return

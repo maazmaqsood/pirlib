@@ -10,14 +10,14 @@ from datasets import load_dataset
 from torch.utils.data import DataLoader, TensorDataset
 from .utils import tuning, distillation, load_hyperparameters, inference
 
-num_samples = 100
+num_samples = -1
 
 
 @task(cache=True, cache_key_file="hparams", timer=True)
 def data_preprocessing(dataset: DirectoryPath, *, hparams: FilePath) -> DirectoryPath:
     """Data Preprocessing Stage."""
     start_time = time.time()
-    hyperparameters_dict = load_hyperparameters(dataset)
+    hyperparameters_dict = load_hyperparameters(hparams)
     train_inputs_encodings, train_summaries_encodings = torch.load(
         dataset / "tokenized_train_data.pt"
     )
@@ -92,7 +92,7 @@ def fine_tuning(
     """Fine Tuning Stage."""
     start_time = time.time()
     model_name = "t5-small"
-    hyperparameters_dict = load_hyperparameters(dataset)
+    hyperparameters_dict = load_hyperparameters(hparams)
 
     tokenizer = T5Tokenizer.from_pretrained(model_name)
     model = T5ForConditionalGeneration.from_pretrained(model_name).to("cuda:0")
@@ -134,7 +134,7 @@ def fine_tuning(
     return output_dir
 
 
-@task(cache=True, cache_key_file="hparams")
+@task(cache=True, cache_key_file="hparams", timer=True)
 def model_distillation(
     fine_tuned_model_path: DirectoryPath,
     data_path: DirectoryPath,
@@ -145,7 +145,7 @@ def model_distillation(
     """Distillation Stage."""
     start_time = time.time()
     model_name = "t5-small"
-    hyperparameters_dict = load_hyperparameters(dataset)
+    hyperparameters_dict = load_hyperparameters(hparams)
 
     # Load your fine-tuned t5-small teacher model and tokenizer
     teacher_model = T5ForConditionalGeneration.from_pretrained(
@@ -265,38 +265,28 @@ def model_inference(
     return dataset
 
 
-@task(cache=True, cache_key_file="hparams")
+# @task(cache=True, cache_key_file="hparams")
+@task()
 def generate_output(
     dataset: DirectoryPath,
     data_path: DirectoryPath,
     fine_tuning_output: DirectoryPath,
     distillation_output: DirectoryPath,
     inference_output: DirectoryPath,
-    *,
     hparams: FilePath,
 ) -> DirectoryPath:
     """Output Generation."""
-    # with open(dataset / "initial_hparams.json") as initial_hparams:
-    #     initial_hps = json.load(initial_hparams)
 
     final_metrics = {"cost": "", "obj": 0}
-
-    # with open(dataset / "hparams.json") as _hparams:
-    #     hyperparmeters = json.load(_hparams)
-
-    # hp_dataset = hyperparmeters["dataset"]
-
     with open(data_path / "metrics.json") as _metrics:
         data_metrics = json.load(_metrics)
-
     with open(fine_tuning_output / "metrics.json") as _metrics:
         fine_tuning_metrics = json.load(_metrics)
-
     with open(distillation_output / "metrics.json") as _metrics:
         distillation_metrics = json.load(_metrics)
 
-    with open(inference_output / "metrics.json") as _metrics:
-        inference_metrics = json.load(_metrics)
+    # with open(inference_output / "metrics.json") as _metrics:
+    #     inference_metrics = json.load(_metrics)
 
     final_metrics["cost"] = [
         data_metrics["cost"],
@@ -304,15 +294,7 @@ def generate_output(
         distillation_metrics["cost"],
         # inference_metrics["cost"],
     ]
-
     final_metrics["obj"] = distillation_metrics["rouge_scores"][0]["rougeLsum"]
-
-    # obj_validation_loss = metrics["validation_loss"]
-    # obj_validation_loss_avg = sum(obj_validation_loss) / len(obj_validation_loss)
-
-    # hp_dataset["obj"].append(obj_validation_loss_avg)
-
-    # initial_hps["dataset"] = hp_dataset
 
     output_dir = task.context().output
 

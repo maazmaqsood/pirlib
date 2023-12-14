@@ -2,7 +2,7 @@
 import json
 import torch
 import evaluate
-from pirlib.iotypes import DirectoryPath
+from pirlib.iotypes import FilePath
 from torch.nn.parallel import DataParallel
 from nltk.translate.bleu_score import corpus_bleu
 import time
@@ -17,11 +17,11 @@ def calculate_bleu_score(predictions, references):
     )
 
 
-def load_hyperparameters(dataset: DirectoryPath) -> dict:
+def load_hyperparameters(hparams: FilePath) -> dict:
     """Function for loading hyperparameters."""
-    with open(dataset / "hparams.json") as _hparams:
-        hyperparmeters = json.load(_hparams)
-    hyperparameters_dict = hyperparmeters["new_hp"]
+    with open(hparams) as _hparams:
+        hyperparameters_dict = json.load(_hparams)
+    # hyperparameters_dict = hyperparmeters["new_hp"]
     return hyperparameters_dict
 
 

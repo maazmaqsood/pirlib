@@ -13,13 +13,18 @@ spec:
       - -m
       - pirlib.backends.argo_batch
       - node
-      - gASVdQIAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMEmRhdGFfcHJlcHJvY2Vzc2luZ5SMC2VudHJ5cG9pbnRzlH2UjARtYWlulGgAjApFbnRyeXBvaW50lJOUKYGUfZQojAd2ZXJzaW9ulIwCdjGUjAdoYW5kbGVylIwxZXhhbXBsZXMudDVfZmluZV90dW5pbmcudHVuaW5nOmRhdGFfcHJlcHJvY2Vzc2luZ5SMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lIwFdGltZXKUiXOMBmlucHV0c5RdlGgAjAVJbnB1dJSTlCmBlH2UKGgFjAdkYXRhc2V0lIwGaW90eXBllIwJRElSRUNUT1JZlIwGc291cmNllGgAjApEYXRhU291cmNllJOUKYGUfZQojAdub2RlX2lklE6MC3N1YmdyYXBoX2lklE6MCW91dHB1dF9pZJROjA5ncmFwaF9pbnB1dF9pZJSMB2RhdGFzZXSUdWKMBG1ldGGUaACMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwHZGF0YXNldJSMC2Fubm90YXRpb25zlE51YnViYYwHb3V0cHV0c5RdlGgAjAZPdXRwdXSUk5QpgZR9lChoBYwGcmV0dXJulGgijAlESVJFQ1RPUlmUaC5oMCmBlH2UKGgzjAZyZXR1cm6UaDVOdWJ1YmFoLmgwKYGUfZQoaDOMEmRhdGFfcHJlcHJvY2Vzc2luZ5RoNU51YnViLg==
-      - gASVigAAAAAAAABdlIwKcGlybGliLnBpcpSMCkdyYXBoSW5wdXSUk5QpgZR9lCiMAmlklIwHZGF0YXNldJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBG1ldGGUaAGMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwHZGF0YXNldJSMC2Fubm90YXRpb25zlE51YnViYS4=
+      - gASV/gIAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMEmRhdGFfcHJlcHJvY2Vzc2luZ5SMC2VudHJ5cG9pbnRzlH2UjARtYWlulGgAjApFbnRyeXBvaW50lJOUKYGUfZQojAd2ZXJzaW9ulIwCdjGUjAdoYW5kbGVylIwxZXhhbXBsZXMudDVfZmluZV90dW5pbmcudHVuaW5nOmRhdGFfcHJlcHJvY2Vzc2luZ5SMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lCiMBXRpbWVylIiMBWNhY2hllIiMDmNhY2hlX2tleV9maWxllIwHaHBhcmFtc5R1jAZpbnB1dHOUXZQoaACMBUlucHV0lJOUKYGUfZQoaAWMB2RhdGFzZXSUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjAZzb3VyY2WUaACMCkRhdGFTb3VyY2WUk5QpgZR9lCiMB25vZGVfaWSUTowLc3ViZ3JhcGhfaWSUTowJb3V0cHV0X2lklE6MDmdyYXBoX2lucHV0X2lklIwHZGF0YXNldJR1YowEbWV0YZRoAIwITWV0YWRhdGGUk5QpgZR9lCiMBG5hbWWUjAdkYXRhc2V0lIwLYW5ub3RhdGlvbnOUTnVidWJoISmBlH2UKGgFjAdocGFyYW1zlGgljARGSUxFlGgnaCkpgZR9lChoLE5oLU5oLk5oL4wPZGF0YV9wcmVwcm9jX2hwlHViaDFoMymBlH2UKGg2jAdocGFyYW1zlGg4TnVidWJljAdvdXRwdXRzlF2UaACMBk91dHB1dJSTlCmBlH2UKGgFjAZyZXR1cm6UaCWMCURJUkVDVE9SWZRoMWgzKYGUfZQoaDaMBnJldHVybpRoOE51YnViYWgxaDMpgZR9lChoNowSZGF0YV9wcmVwcm9jZXNzaW5nlGg4TnVidWIu
+      - gASVlwEAAAAAAABdlCiMCnBpcmxpYi5waXKUjApHcmFwaElucHV0lJOUKYGUfZQojAJpZJSMB2RhdGFzZXSUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjARtZXRhlGgBjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMB2RhdGFzZXSUjAthbm5vdGF0aW9uc5ROdWJ1YmgDKYGUfZQoaAaMB2hwYXJhbXOUaAiMBEZJTEWUaApoDCmBlH2UKGgPjAdocGFyYW1zlGgRTnVidWJoAymBlH2UKGgGjA9kYXRhX3ByZXByb2NfaHCUaAiMBEZJTEWUaApoDCmBlH2UKGgPjA9kYXRhX3ByZXByb2NfaHCUaBFOdWJ1YmgDKYGUfZQoaAaMCXR1bmluZ19ocJRoCIwERklMRZRoCmgMKYGUfZQoaA+MCXR1bmluZ19ocJRoEU51YnViaAMpgZR9lChoBowPZGlzdGlsbGF0aW9uX2hwlGgIjARGSUxFlGgKaAwpgZR9lChoD4wPZGlzdGlsbGF0aW9uX2hwlGgRTnVidWJlLg==
       volumeMounts:
       - name: node-outputs
         mountPath: /mnt/node_outputs
       - name: dataset
         mountPath: /mnt/graph_inputs/dataset
+      - name: data-preproc-hp
+        mountPath: /mnt/graph_inputs/data_preproc_hp
+        subPath: stage_1_hparams.json
+      - name: cache-dir
+        mountPath: /pirlib/cache
     volumes:
     - name: node-outputs
       nfs:
@@ -31,6 +36,16 @@ spec:
         server: k8s-master.cm.cluster
         path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
         readOnly: yes
+    - name: data-preproc-hp
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: cache-dir
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/cache_dir
+        readOnly: no
   - name: fine-tuning-template
     container:
       image: maaz112233/pirlib
@@ -39,13 +54,18 @@ spec:
       - -m
       - pirlib.backends.argo_batch
       - node
-      - gASV2AIAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMC2ZpbmVfdHVuaW5nlIwLZW50cnlwb2ludHOUfZSMBG1haW6UaACMCkVudHJ5cG9pbnSUk5QpgZR9lCiMB3ZlcnNpb26UjAJ2MZSMB2hhbmRsZXKUjCpleGFtcGxlcy50NV9maW5lX3R1bmluZy50dW5pbmc6ZmluZV90dW5pbmeUjAdydW50aW1llIwKcHl0aG9uOjMuOJSMB2NvZGV1cmyUTowFaW1hZ2WUjBFtYWF6MTEyMjMzL3BpcmxpYpR1YnOMCWZyYW1ld29ya5ROjAZjb25maWeUfZSMBXRpbWVylIlzjAZpbnB1dHOUXZQoaACMBUlucHV0lJOUKYGUfZQoaAWMCWRhdGFfcGF0aJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBnNvdXJjZZRoAIwKRGF0YVNvdXJjZZSTlCmBlH2UKIwHbm9kZV9pZJSMEmRhdGFfcHJlcHJvY2Vzc2luZ5SMC3N1YmdyYXBoX2lklE6MCW91dHB1dF9pZJSMBnJldHVybpSMDmdyYXBoX2lucHV0X2lklE51YowEbWV0YZRoAIwITWV0YWRhdGGUk5QpgZR9lCiMBG5hbWWUjAlkYXRhX3BhdGiUjAthbm5vdGF0aW9uc5ROdWJ1YmgeKYGUfZQoaAWMB2RhdGFzZXSUaCKMCURJUkVDVE9SWZRoJGgmKYGUfZQoaClOaCtOaCxOaC6MB2RhdGFzZXSUdWJoL2gxKYGUfZQoaDSMB2RhdGFzZXSUaDZOdWJ1YmWMB291dHB1dHOUXZRoAIwGT3V0cHV0lJOUKYGUfZQoaAWMBnJldHVybpRoIowJRElSRUNUT1JZlGgvaDEpgZR9lChoNIwGcmV0dXJulGg2TnVidWJhaC9oMSmBlH2UKGg0jAtmaW5lX3R1bmluZ5RoNk51YnViLg==
-      - gASVigAAAAAAAABdlIwKcGlybGliLnBpcpSMCkdyYXBoSW5wdXSUk5QpgZR9lCiMAmlklIwHZGF0YXNldJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBG1ldGGUaAGMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwHZGF0YXNldJSMC2Fubm90YXRpb25zlE51YnViYS4=
+      - gASVWgMAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMC2ZpbmVfdHVuaW5nlIwLZW50cnlwb2ludHOUfZSMBG1haW6UaACMCkVudHJ5cG9pbnSUk5QpgZR9lCiMB3ZlcnNpb26UjAJ2MZSMB2hhbmRsZXKUjCpleGFtcGxlcy50NV9maW5lX3R1bmluZy50dW5pbmc6ZmluZV90dW5pbmeUjAdydW50aW1llIwKcHl0aG9uOjMuOJSMB2NvZGV1cmyUTowFaW1hZ2WUjBFtYWF6MTEyMjMzL3BpcmxpYpR1YnOMCWZyYW1ld29ya5ROjAZjb25maWeUfZQojAV0aW1lcpSIjAVjYWNoZZSIjA5jYWNoZV9rZXlfZmlsZZSMB2hwYXJhbXOUdYwGaW5wdXRzlF2UKGgAjAVJbnB1dJSTlCmBlH2UKGgFjAlkYXRhX3BhdGiUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjAZzb3VyY2WUaACMCkRhdGFTb3VyY2WUk5QpgZR9lCiMB25vZGVfaWSUjBJkYXRhX3ByZXByb2Nlc3NpbmeUjAtzdWJncmFwaF9pZJROjAlvdXRwdXRfaWSUjAZyZXR1cm6UjA5ncmFwaF9pbnB1dF9pZJROdWKMBG1ldGGUaACMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwJZGF0YV9wYXRolIwLYW5ub3RhdGlvbnOUTnVidWJoISmBlH2UKGgFjAdkYXRhc2V0lGgljAlESVJFQ1RPUlmUaCdoKSmBlH2UKGgsTmguTmgvTmgxjAdkYXRhc2V0lHViaDJoNCmBlH2UKGg3jAdkYXRhc2V0lGg5TnVidWJoISmBlH2UKGgFjAdocGFyYW1zlGgljARGSUxFlGgnaCkpgZR9lChoLE5oLk5oL05oMYwJdHVuaW5nX2hwlHViaDJoNCmBlH2UKGg3jAdocGFyYW1zlGg5TnVidWJljAdvdXRwdXRzlF2UaACMBk91dHB1dJSTlCmBlH2UKGgFjAZyZXR1cm6UaCWMCURJUkVDVE9SWZRoMmg0KYGUfZQoaDeMBnJldHVybpRoOU51YnViYWgyaDQpgZR9lChoN4wLZmluZV90dW5pbmeUaDlOdWJ1Yi4=
+      - gASVlwEAAAAAAABdlCiMCnBpcmxpYi5waXKUjApHcmFwaElucHV0lJOUKYGUfZQojAJpZJSMB2RhdGFzZXSUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjARtZXRhlGgBjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMB2RhdGFzZXSUjAthbm5vdGF0aW9uc5ROdWJ1YmgDKYGUfZQoaAaMB2hwYXJhbXOUaAiMBEZJTEWUaApoDCmBlH2UKGgPjAdocGFyYW1zlGgRTnVidWJoAymBlH2UKGgGjA9kYXRhX3ByZXByb2NfaHCUaAiMBEZJTEWUaApoDCmBlH2UKGgPjA9kYXRhX3ByZXByb2NfaHCUaBFOdWJ1YmgDKYGUfZQoaAaMCXR1bmluZ19ocJRoCIwERklMRZRoCmgMKYGUfZQoaA+MCXR1bmluZ19ocJRoEU51YnViaAMpgZR9lChoBowPZGlzdGlsbGF0aW9uX2hwlGgIjARGSUxFlGgKaAwpgZR9lChoD4wPZGlzdGlsbGF0aW9uX2hwlGgRTnVidWJlLg==
       volumeMounts:
       - name: node-outputs
         mountPath: /mnt/node_outputs
       - name: dataset
         mountPath: /mnt/graph_inputs/dataset
+      - name: tuning-hp
+        mountPath: /mnt/graph_inputs/tuning_hp
+        subPath: stage_2_hparams.json
+      - name: cache-dir
+        mountPath: /pirlib/cache
     volumes:
     - name: node-outputs
       nfs:
@@ -57,6 +77,16 @@ spec:
         server: k8s-master.cm.cluster
         path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
         readOnly: yes
+    - name: tuning-hp
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: cache-dir
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/cache_dir
+        readOnly: no
   - name: model-distillation-template
     container:
       image: maaz112233/pirlib
@@ -65,13 +95,18 @@ spec:
       - -m
       - pirlib.backends.argo_batch
       - node
-      - gASVdQMAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMEm1vZGVsX2Rpc3RpbGxhdGlvbpSMC2VudHJ5cG9pbnRzlH2UjARtYWlulGgAjApFbnRyeXBvaW50lJOUKYGUfZQojAd2ZXJzaW9ulIwCdjGUjAdoYW5kbGVylIwxZXhhbXBsZXMudDVfZmluZV90dW5pbmcudHVuaW5nOm1vZGVsX2Rpc3RpbGxhdGlvbpSMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lIwFdGltZXKUiXOMBmlucHV0c5RdlChoAIwFSW5wdXSUk5QpgZR9lChoBYwVZmluZV90dW5lZF9tb2RlbF9wYXRolIwGaW90eXBllIwJRElSRUNUT1JZlIwGc291cmNllGgAjApEYXRhU291cmNllJOUKYGUfZQojAdub2RlX2lklIwLZmluZV90dW5pbmeUjAtzdWJncmFwaF9pZJROjAlvdXRwdXRfaWSUjAZyZXR1cm6UjA5ncmFwaF9pbnB1dF9pZJROdWKMBG1ldGGUaACMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwVZmluZV90dW5lZF9tb2RlbF9wYXRolIwLYW5ub3RhdGlvbnOUTnVidWJoHimBlH2UKGgFjAlkYXRhX3BhdGiUaCKMCURJUkVDVE9SWZRoJGgmKYGUfZQoaCmMEmRhdGFfcHJlcHJvY2Vzc2luZ5RoK05oLIwGcmV0dXJulGguTnViaC9oMSmBlH2UKGg0jAlkYXRhX3BhdGiUaDZOdWJ1YmgeKYGUfZQoaAWMB2RhdGFzZXSUaCKMCURJUkVDVE9SWZRoJGgmKYGUfZQoaClOaCtOaCxOaC6MB2RhdGFzZXSUdWJoL2gxKYGUfZQoaDSMB2RhdGFzZXSUaDZOdWJ1YmWMB291dHB1dHOUXZRoAIwGT3V0cHV0lJOUKYGUfZQoaAWMBnJldHVybpRoIowJRElSRUNUT1JZlGgvaDEpgZR9lChoNIwGcmV0dXJulGg2TnVidWJhaC9oMSmBlH2UKGg0jBJtb2RlbF9kaXN0aWxsYXRpb26UaDZOdWJ1Yi4=
-      - gASVigAAAAAAAABdlIwKcGlybGliLnBpcpSMCkdyYXBoSW5wdXSUk5QpgZR9lCiMAmlklIwHZGF0YXNldJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBG1ldGGUaAGMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwHZGF0YXNldJSMC2Fubm90YXRpb25zlE51YnViYS4=
+      - gASV/QMAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMEm1vZGVsX2Rpc3RpbGxhdGlvbpSMC2VudHJ5cG9pbnRzlH2UjARtYWlulGgAjApFbnRyeXBvaW50lJOUKYGUfZQojAd2ZXJzaW9ulIwCdjGUjAdoYW5kbGVylIwxZXhhbXBsZXMudDVfZmluZV90dW5pbmcudHVuaW5nOm1vZGVsX2Rpc3RpbGxhdGlvbpSMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lCiMBXRpbWVylIiMBWNhY2hllIiMDmNhY2hlX2tleV9maWxllIwHaHBhcmFtc5R1jAZpbnB1dHOUXZQoaACMBUlucHV0lJOUKYGUfZQoaAWMFWZpbmVfdHVuZWRfbW9kZWxfcGF0aJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBnNvdXJjZZRoAIwKRGF0YVNvdXJjZZSTlCmBlH2UKIwHbm9kZV9pZJSMC2ZpbmVfdHVuaW5nlIwLc3ViZ3JhcGhfaWSUTowJb3V0cHV0X2lklIwGcmV0dXJulIwOZ3JhcGhfaW5wdXRfaWSUTnVijARtZXRhlGgAjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMFWZpbmVfdHVuZWRfbW9kZWxfcGF0aJSMC2Fubm90YXRpb25zlE51YnViaCEpgZR9lChoBYwJZGF0YV9wYXRolGgljAlESVJFQ1RPUlmUaCdoKSmBlH2UKGgsjBJkYXRhX3ByZXByb2Nlc3NpbmeUaC5OaC+MBnJldHVybpRoMU51YmgyaDQpgZR9lChoN4wJZGF0YV9wYXRolGg5TnVidWJoISmBlH2UKGgFjAdkYXRhc2V0lGgljAlESVJFQ1RPUlmUaCdoKSmBlH2UKGgsTmguTmgvTmgxjAdkYXRhc2V0lHViaDJoNCmBlH2UKGg3jAdkYXRhc2V0lGg5TnVidWJoISmBlH2UKGgFjAdocGFyYW1zlGgljARGSUxFlGgnaCkpgZR9lChoLE5oLk5oL05oMYwPZGlzdGlsbGF0aW9uX2hwlHViaDJoNCmBlH2UKGg3jAdocGFyYW1zlGg5TnVidWJljAdvdXRwdXRzlF2UaACMBk91dHB1dJSTlCmBlH2UKGgFjAZyZXR1cm6UaCWMCURJUkVDVE9SWZRoMmg0KYGUfZQoaDeMBnJldHVybpRoOU51YnViYWgyaDQpgZR9lChoN4wSbW9kZWxfZGlzdGlsbGF0aW9ulGg5TnVidWIu
+      - gASVlwEAAAAAAABdlCiMCnBpcmxpYi5waXKUjApHcmFwaElucHV0lJOUKYGUfZQojAJpZJSMB2RhdGFzZXSUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjARtZXRhlGgBjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMB2RhdGFzZXSUjAthbm5vdGF0aW9uc5ROdWJ1YmgDKYGUfZQoaAaMB2hwYXJhbXOUaAiMBEZJTEWUaApoDCmBlH2UKGgPjAdocGFyYW1zlGgRTnVidWJoAymBlH2UKGgGjA9kYXRhX3ByZXByb2NfaHCUaAiMBEZJTEWUaApoDCmBlH2UKGgPjA9kYXRhX3ByZXByb2NfaHCUaBFOdWJ1YmgDKYGUfZQoaAaMCXR1bmluZ19ocJRoCIwERklMRZRoCmgMKYGUfZQoaA+MCXR1bmluZ19ocJRoEU51YnViaAMpgZR9lChoBowPZGlzdGlsbGF0aW9uX2hwlGgIjARGSUxFlGgKaAwpgZR9lChoD4wPZGlzdGlsbGF0aW9uX2hwlGgRTnVidWJlLg==
       volumeMounts:
       - name: node-outputs
         mountPath: /mnt/node_outputs
       - name: dataset
         mountPath: /mnt/graph_inputs/dataset
+      - name: distillation-hp
+        mountPath: /mnt/graph_inputs/distillation_hp
+        subPath: hparams.json
+      - name: cache-dir
+        mountPath: /pirlib/cache
     volumes:
     - name: node-outputs
       nfs:
@@ -83,6 +118,57 @@ spec:
         server: k8s-master.cm.cluster
         path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
         readOnly: yes
+    - name: distillation-hp
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: cache-dir
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/cache_dir
+        readOnly: no
+  - name: model-inference-template
+    container:
+      image: maaz112233/pirlib
+      command:
+      - python
+      - -m
+      - pirlib.backends.argo_batch
+      - node
+      - gASVeQQAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMD21vZGVsX2luZmVyZW5jZZSMC2VudHJ5cG9pbnRzlH2UjARtYWlulGgAjApFbnRyeXBvaW50lJOUKYGUfZQojAd2ZXJzaW9ulIwCdjGUjAdoYW5kbGVylIwuZXhhbXBsZXMudDVfZmluZV90dW5pbmcudHVuaW5nOm1vZGVsX2luZmVyZW5jZZSMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lCiMBXRpbWVylImMBWNhY2hllIiMDmNhY2hlX2tleV9maWxllIwHaHBhcmFtc5R1jAZpbnB1dHOUXZQoaACMBUlucHV0lJOUKYGUfZQoaAWMB2RhdGFzZXSUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjAZzb3VyY2WUaACMCkRhdGFTb3VyY2WUk5QpgZR9lCiMB25vZGVfaWSUTowLc3ViZ3JhcGhfaWSUTowJb3V0cHV0X2lklE6MDmdyYXBoX2lucHV0X2lklIwHZGF0YXNldJR1YowEbWV0YZRoAIwITWV0YWRhdGGUk5QpgZR9lCiMBG5hbWWUjAdkYXRhc2V0lIwLYW5ub3RhdGlvbnOUTnVidWJoISmBlH2UKGgFjAlkYXRhX3BhdGiUaCWMCURJUkVDVE9SWZRoJ2gpKYGUfZQoaCyMEmRhdGFfcHJlcHJvY2Vzc2luZ5RoLU5oLowGcmV0dXJulGgvTnViaDFoMymBlH2UKGg2jAlkYXRhX3BhdGiUaDhOdWJ1YmghKYGUfZQoaAWMFWZpbmVfdHVuZWRfbW9kZWxfcGF0aJRoJYwJRElSRUNUT1JZlGgnaCkpgZR9lChoLIwLZmluZV90dW5pbmeUaC1OaC6MBnJldHVybpRoL051YmgxaDMpgZR9lChoNowVZmluZV90dW5lZF9tb2RlbF9wYXRolGg4TnVidWJoISmBlH2UKGgFjBRkaXN0aWxsZWRfbW9kZWxfcGF0aJRoJYwJRElSRUNUT1JZlGgnaCkpgZR9lChoLIwSbW9kZWxfZGlzdGlsbGF0aW9ulGgtTmgujAZyZXR1cm6UaC9OdWJoMWgzKYGUfZQoaDaMFGRpc3RpbGxlZF9tb2RlbF9wYXRolGg4TnVidWJoISmBlH2UKGgFjAdocGFyYW1zlGgljARGSUxFlGgnaCkpgZR9lChoLE5oLU5oLk5oL4wHaHBhcmFtc5R1YmgxaDMpgZR9lChoNowHaHBhcmFtc5RoOE51YnViZYwHb3V0cHV0c5RdlGgAjAZPdXRwdXSUk5QpgZR9lChoBYwGcmV0dXJulGgljAlESVJFQ1RPUlmUaDFoMymBlH2UKGg2jAZyZXR1cm6UaDhOdWJ1YmFoMWgzKYGUfZQoaDaMD21vZGVsX2luZmVyZW5jZZRoOE51YnViLg==
+      - gASVlwEAAAAAAABdlCiMCnBpcmxpYi5waXKUjApHcmFwaElucHV0lJOUKYGUfZQojAJpZJSMB2RhdGFzZXSUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjARtZXRhlGgBjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMB2RhdGFzZXSUjAthbm5vdGF0aW9uc5ROdWJ1YmgDKYGUfZQoaAaMB2hwYXJhbXOUaAiMBEZJTEWUaApoDCmBlH2UKGgPjAdocGFyYW1zlGgRTnVidWJoAymBlH2UKGgGjA9kYXRhX3ByZXByb2NfaHCUaAiMBEZJTEWUaApoDCmBlH2UKGgPjA9kYXRhX3ByZXByb2NfaHCUaBFOdWJ1YmgDKYGUfZQoaAaMCXR1bmluZ19ocJRoCIwERklMRZRoCmgMKYGUfZQoaA+MCXR1bmluZ19ocJRoEU51YnViaAMpgZR9lChoBowPZGlzdGlsbGF0aW9uX2hwlGgIjARGSUxFlGgKaAwpgZR9lChoD4wPZGlzdGlsbGF0aW9uX2hwlGgRTnVidWJlLg==
+      volumeMounts:
+      - name: node-outputs
+        mountPath: /mnt/node_outputs
+      - name: dataset
+        mountPath: /mnt/graph_inputs/dataset
+      - name: hparams
+        mountPath: /mnt/graph_inputs/hparams
+        subPath: hparams.json
+      - name: cache-dir
+        mountPath: /pirlib/cache
+    volumes:
+    - name: node-outputs
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/outputs
+        readOnly: no
+    - name: dataset
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: hparams
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: cache-dir
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/cache_dir
+        readOnly: no
   - name: generate-output-template
     container:
       image: maaz112233/pirlib
@@ -91,13 +177,16 @@ spec:
       - -m
       - pirlib.backends.argo_batch
       - node
-      - gASV9gIAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMD2dlbmVyYXRlX291dHB1dJSMC2VudHJ5cG9pbnRzlH2UjARtYWlulGgAjApFbnRyeXBvaW50lJOUKYGUfZQojAd2ZXJzaW9ulIwCdjGUjAdoYW5kbGVylIwuZXhhbXBsZXMudDVfZmluZV90dW5pbmcudHVuaW5nOmdlbmVyYXRlX291dHB1dJSMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lIwFdGltZXKUiXOMBmlucHV0c5RdlChoAIwFSW5wdXSUk5QpgZR9lChoBYwHZGF0YXNldJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBnNvdXJjZZRoAIwKRGF0YVNvdXJjZZSTlCmBlH2UKIwHbm9kZV9pZJROjAtzdWJncmFwaF9pZJROjAlvdXRwdXRfaWSUTowOZ3JhcGhfaW5wdXRfaWSUjAdkYXRhc2V0lHVijARtZXRhlGgAjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMB2RhdGFzZXSUjAthbm5vdGF0aW9uc5ROdWJ1YmgeKYGUfZQoaAWMEmZpbmVfdHVuaW5nX291dHB1dJRoIowJRElSRUNUT1JZlGgkaCYpgZR9lChoKYwSbW9kZWxfZGlzdGlsbGF0aW9ulGgqTmgrjAZyZXR1cm6UaCxOdWJoLmgwKYGUfZQoaDOMEmZpbmVfdHVuaW5nX291dHB1dJRoNU51YnViZYwHb3V0cHV0c5RdlGgAjAZPdXRwdXSUk5QpgZR9lChoBYwGcmV0dXJulGgijAlESVJFQ1RPUlmUaC5oMCmBlH2UKGgzjAZyZXR1cm6UaDVOdWJ1YmFoLmgwKYGUfZQoaDOMD2dlbmVyYXRlX291dHB1dJRoNU51YnViLg==
-      - gASVigAAAAAAAABdlIwKcGlybGliLnBpcpSMCkdyYXBoSW5wdXSUk5QpgZR9lCiMAmlklIwHZGF0YXNldJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBG1ldGGUaAGMCE1ldGFkYXRhlJOUKYGUfZQojARuYW1llIwHZGF0YXNldJSMC2Fubm90YXRpb25zlE51YnViYS4=
+      - gASVzgQAAAAAAACMCnBpcmxpYi5waXKUjAROb2RllJOUKYGUfZQojAJpZJSMD2dlbmVyYXRlX291dHB1dJSMC2VudHJ5cG9pbnRzlH2UjARtYWlulGgAjApFbnRyeXBvaW50lJOUKYGUfZQojAd2ZXJzaW9ulIwCdjGUjAdoYW5kbGVylIwuZXhhbXBsZXMudDVfZmluZV90dW5pbmcudHVuaW5nOmdlbmVyYXRlX291dHB1dJSMB3J1bnRpbWWUjApweXRob246My44lIwHY29kZXVybJROjAVpbWFnZZSMEW1hYXoxMTIyMzMvcGlybGlilHVic4wJZnJhbWV3b3JrlE6MBmNvbmZpZ5R9lIwFdGltZXKUiXOMBmlucHV0c5RdlChoAIwFSW5wdXSUk5QpgZR9lChoBYwHZGF0YXNldJSMBmlvdHlwZZSMCURJUkVDVE9SWZSMBnNvdXJjZZRoAIwKRGF0YVNvdXJjZZSTlCmBlH2UKIwHbm9kZV9pZJROjAtzdWJncmFwaF9pZJROjAlvdXRwdXRfaWSUTowOZ3JhcGhfaW5wdXRfaWSUjAdkYXRhc2V0lHVijARtZXRhlGgAjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMB2RhdGFzZXSUjAthbm5vdGF0aW9uc5ROdWJ1YmgeKYGUfZQoaAWMCWRhdGFfcGF0aJRoIowJRElSRUNUT1JZlGgkaCYpgZR9lChoKYwSZGF0YV9wcmVwcm9jZXNzaW5nlGgqTmgrjAZyZXR1cm6UaCxOdWJoLmgwKYGUfZQoaDOMCWRhdGFfcGF0aJRoNU51YnViaB4pgZR9lChoBYwSZmluZV90dW5pbmdfb3V0cHV0lGgijAlESVJFQ1RPUlmUaCRoJimBlH2UKGgpjAtmaW5lX3R1bmluZ5RoKk5oK4wGcmV0dXJulGgsTnViaC5oMCmBlH2UKGgzjBJmaW5lX3R1bmluZ19vdXRwdXSUaDVOdWJ1YmgeKYGUfZQoaAWME2Rpc3RpbGxhdGlvbl9vdXRwdXSUaCKMCURJUkVDVE9SWZRoJGgmKYGUfZQoaCmMEm1vZGVsX2Rpc3RpbGxhdGlvbpRoKk5oK4wGcmV0dXJulGgsTnViaC5oMCmBlH2UKGgzjBNkaXN0aWxsYXRpb25fb3V0cHV0lGg1TnVidWJoHimBlH2UKGgFjBBpbmZlcmVuY2Vfb3V0cHV0lGgijAlESVJFQ1RPUlmUaCRoJimBlH2UKGgpjA9tb2RlbF9pbmZlcmVuY2WUaCpOaCuMBnJldHVybpRoLE51YmguaDApgZR9lChoM4wQaW5mZXJlbmNlX291dHB1dJRoNU51YnViaB4pgZR9lChoBYwHaHBhcmFtc5RoIowERklMRZRoJGgmKYGUfZQoaClOaCpOaCtOaCyMB2hwYXJhbXOUdWJoLmgwKYGUfZQoaDOMB2hwYXJhbXOUaDVOdWJ1YmWMB291dHB1dHOUXZRoAIwGT3V0cHV0lJOUKYGUfZQoaAWMBnJldHVybpRoIowJRElSRUNUT1JZlGguaDApgZR9lChoM4wGcmV0dXJulGg1TnVidWJhaC5oMCmBlH2UKGgzjA9nZW5lcmF0ZV9vdXRwdXSUaDVOdWJ1Yi4=
+      - gASVlwEAAAAAAABdlCiMCnBpcmxpYi5waXKUjApHcmFwaElucHV0lJOUKYGUfZQojAJpZJSMB2RhdGFzZXSUjAZpb3R5cGWUjAlESVJFQ1RPUlmUjARtZXRhlGgBjAhNZXRhZGF0YZSTlCmBlH2UKIwEbmFtZZSMB2RhdGFzZXSUjAthbm5vdGF0aW9uc5ROdWJ1YmgDKYGUfZQoaAaMB2hwYXJhbXOUaAiMBEZJTEWUaApoDCmBlH2UKGgPjAdocGFyYW1zlGgRTnVidWJoAymBlH2UKGgGjA9kYXRhX3ByZXByb2NfaHCUaAiMBEZJTEWUaApoDCmBlH2UKGgPjA9kYXRhX3ByZXByb2NfaHCUaBFOdWJ1YmgDKYGUfZQoaAaMCXR1bmluZ19ocJRoCIwERklMRZRoCmgMKYGUfZQoaA+MCXR1bmluZ19ocJRoEU51YnViaAMpgZR9lChoBowPZGlzdGlsbGF0aW9uX2hwlGgIjARGSUxFlGgKaAwpgZR9lChoD4wPZGlzdGlsbGF0aW9uX2hwlGgRTnVidWJlLg==
       volumeMounts:
       - name: node-outputs
         mountPath: /mnt/node_outputs
       - name: dataset
         mountPath: /mnt/graph_inputs/dataset
+      - name: hparams
+        mountPath: /mnt/graph_inputs/hparams
+        subPath: hparams.json
     volumes:
     - name: node-outputs
       nfs:
@@ -105,6 +194,11 @@ spec:
         path: /home/maaz/pirlib/examples/t5_fine_tuning/outputs
         readOnly: no
     - name: dataset
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: hparams
       nfs:
         server: k8s-master.cm.cluster
         path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
@@ -123,6 +217,18 @@ spec:
         mountPath: /mnt/node_outputs
       - name: dataset
         mountPath: /mnt/graph_inputs/dataset
+      - name: hparams
+        mountPath: /mnt/graph_inputs/hparams
+        subPath: hparams.json
+      - name: data-preproc-hp
+        mountPath: /mnt/graph_inputs/data_preproc_hp
+        subPath: stage_1_hparams.json
+      - name: tuning-hp
+        mountPath: /mnt/graph_inputs/tuning_hp
+        subPath: stage_2_hparams.json
+      - name: distillation-hp
+        mountPath: /mnt/graph_inputs/distillation_hp
+        subPath: hparams.json
       - name: graph-outputs
         mountPath: /mnt/graph_outputs
     volumes:
@@ -132,6 +238,26 @@ spec:
         path: /home/maaz/pirlib/examples/t5_fine_tuning/outputs
         readOnly: no
     - name: dataset
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: hparams
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: data-preproc-hp
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: tuning-hp
+      nfs:
+        server: k8s-master.cm.cluster
+        path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
+        readOnly: yes
+    - name: distillation-hp
       nfs:
         server: k8s-master.cm.cluster
         path: /home/maaz/pirlib/examples/t5_fine_tuning/inputs
@@ -156,14 +282,24 @@ spec:
         dependencies:
         - fine-tuning
         - data-preprocessing
+      - name: model-inference
+        template: model-inference-template
+        dependencies:
+        - data-preprocessing
+        - fine-tuning
+        - model-distillation
       - name: generate-output
         template: generate-output-template
         dependencies:
+        - data-preprocessing
+        - fine-tuning
         - model-distillation
+        - model-inference
       - name: t5-fine-tuning
         template: t5-fine-tuning-template
         dependencies:
         - data-preprocessing
         - fine-tuning
         - model-distillation
+        - model-inference
         - generate-output

@@ -20,8 +20,8 @@ mkdir -p $EXAMPLEDIR/cache_dir
 INPUT_dataset=$EXAMPLEDIR/inputs \
 INPUT_raw_data=$EXAMPLEDIR/inputs \
 INPUT_hparams=$EXAMPLEDIR/inputs/hparams.json \
-INPUT_data_preproc_hp=$EXAMPLEDIR/inputs/hparams.json \
-INPUT_tuning_hp=$EXAMPLEDIR/inputs/hparams.json \
+INPUT_data_preproc_hp=$EXAMPLEDIR/inputs/stage_1_hparams.json \
+INPUT_tuning_hp=$EXAMPLEDIR/inputs/stage_2_hparams.json \
 INPUT_distillation_hp=$EXAMPLEDIR/inputs/hparams.json \
 CACHE=$EXAMPLEDIR/cache_dir \
 OUTPUT=$EXAMPLEDIR/outputs \
